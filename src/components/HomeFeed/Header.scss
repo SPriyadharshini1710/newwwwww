@@ -1,0 +1,204 @@
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  /* Logo - Stays fixed */
+  .text-gradient {
+    background: linear-gradient(45deg, #074C00, #42A341, #B8E2A3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .logo {
+    font-size: 28px;
+    font-weight: bold;
+    white-space: nowrap;
+    padding-right: 2px;
+    color: #333;
+  }
+  
+  .stories-container {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    overflow-x: auto; /* Allow horizontal scroll */
+    overflow-y: hidden; /* Completely remove vertical scroll */
+    white-space: nowrap; /* Prevent wrapping */
+    scroll-behavior: smooth;
+    padding-bottom: 10px; /* Prevent scrollbar overlapping content */
+  }
+  
+  .stories-container::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari */
+  }
+  
+  .stories-wrapper {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow: hidden; /* Ensure no unwanted scrollbars */
+    width: 100%;
+  }
+  
+  
+  /* Stories Container - Scrollable */
+//   .stories-container {
+//     display: flex;
+//     align-items: center;
+//     gap: 12px;
+//     overflow-x: auto;
+//     overflow-y: hidden;
+//     scrollbar-width: auto; /* Makes scrollbar always visible */
+//     -ms-overflow-style: auto;
+//   }
+  
+  /* Ensure scrollbar is visible in WebKit */
+  .stories-container::-webkit-scrollbar {
+    height: 8px;
+  }
+  
+  .stories-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  .stories-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+  }
+  
+  /* Story Wrapper */
+  .story {
+    position: relative;
+    width: 65px;
+    // height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .story-icon{
+    font-size: 24px;
+  }
+  /* Story Border */
+  .story-border {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #074C00, #42A341, #B8E2A3);
+    padding: 4px;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  /* Proper Hover Effect */
+  .story:hover .avatar-online {
+    transform: scale(1.05);
+  }
+  
+  /* User Story */
+  .user-story .avatar-online {
+    background: linear-gradient(45deg, #074C00, #42A341, #B8E2A3);
+  }
+  
+  .avatar-online {
+    position: relative;
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+    // gap: 15px;
+  }
+
+  .avatar-online img {
+      display: block;
+      width: 45px; /* Adjust size */
+      height: 45px;
+      border-radius: 50%;
+      padding: 1px; /* Adjust border thickness */
+      background: white; /* Inner background */
+      z-index: -1;
+  }
+
+  /* Gradient Border Effect */
+  .avatar-online::before {
+      content: "";
+      position: absolute;
+      top: -3px; left: -3px; right: -3px; bottom: -3px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #074C00, #42A341, #B8E2A3);
+      z-index: -1;
+  }
+  /* Matching Glowing Box-Shadow */
+    .avatar-online::after {
+      content: "";
+      position: absolute;
+      top: -5px; left: -5px; right: -5px; bottom: -5px;
+      border-radius: 50%;
+      background: linear-gradient(45deg, #074C00, #42A341, #B8E2A3);
+      filter: blur(1px); /* Adjust glow intensity */
+      opacity: 0.6; /* Adjust transparency */
+      z-index: -2;
+    }
+
+  /* Story Image */
+  .story-image {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ffffff;
+  }
+  
+  /* Add (+) Icon */
+  .add-icon {
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    background: #42A341;
+    color: white;
+    font-size: 16px;
+    border-radius: 50%;
+    padding: 4px;
+    border: 3px solid white;
+  }
+  
+  /* Sticky Notifications */
+  .header-icons {
+    position: sticky;
+    right: 10px;
+    top: 15px;
+    color: #ffffff;
+    white-space: nowrap;
+  }
+  
+  /* Notification Bell */
+  .notification {
+    position: sticky;
+    cursor: pointer;
+  }
+  
+  .bell-icon {
+    font-size: 22px;
+    color: #333;
+  }
+  
+  .notification-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: red;
+    color: white;
+    font-size: 8px;
+    border-radius: 50%;
+    padding: 3px 6px;
+    font-weight: bold;
+  }
+  

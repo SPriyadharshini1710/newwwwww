@@ -1,0 +1,33 @@
+.explore {
+    width: 250px;
+    padding: 20px;
+    background: #f9f9f9;
+    height: 100vh;
+    border-left: 1px solid #ddd;
+  }
+  
+  .glossy-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+  }
+  
+  /* Glossy Gradient Overlay */
+  .glossy-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0) 70%);
+    border-radius: 12px;
+  }
+  
+  /* Hover Effect */
+  .glossy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+  }
+  

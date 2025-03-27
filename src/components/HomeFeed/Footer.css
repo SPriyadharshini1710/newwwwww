@@ -1,0 +1,159 @@
+/* Footer Styling */
+.footer {
+  background-color: #f1f1f1;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  font-size: 14px;
+  position: fixed; /* Fixes footer at bottom */
+  bottom: 0;
+  width: 100%;
+  height: 60px; /* Fixed height to prevent overlap */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* Ensures it stays on top */
+}
+
+/* Profile Section */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  padding: 10px;
+  background: white;
+  border-radius: 30px;
+  border: 3px solid #ff6b6b;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.profile:hover {
+  transform: translateY(-5px);
+}
+
+/* Profile Image */
+.profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ff6b6b;
+}
+
+/* Profile Name */
+.profile-name {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Profile Container to Keep Hover Active */
+.profile-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Profile Hover Card (Above Profile) */
+.profile-card {
+  position: absolute;
+  bottom: 60px; /* Moves the card above the profile */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  background: rgba(245, 241, 241, 0.5);
+  backdrop-filter: blur(8px);
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Keep profile card visible when hovering over profile-container */
+.profile-container:hover .profile-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Profile Card Image */
+.profile-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+/* Logout Button */
+.logout-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.logout-button:hover {
+  background: #e04e4e;
+}
+
+
+/* Logout Button */
+.profile-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  background: #ff6b6b;
+  color: white;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.profile-button:hover {
+  background: #e04e4e;
+}
+
+/* Notification Section */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.notification {
+  position: relative;
+  cursor: pointer;
+}
+
+.bell-icon {
+  font-size: 20px;
+  color: #1b1b1b;
+}
+
+/* .notification-count {
+  position: absolute;
+  top: -5px;
+  right: -8px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+} */

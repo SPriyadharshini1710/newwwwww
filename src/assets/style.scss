@@ -1,0 +1,25 @@
+//
+// Theme style
+//
+
+
+// Components
+@import "./components/variables_custom";
+@import "./components/variables";
+
+// Import other styles after variables
+// @import "../style/Authentication/common"; 
+
+
+.primary {
+    color: $primary;
+    background-color:$primary;
+  }
+
+.secondary {
+    color: $warning;
+    background-color:$warning;
+}
+ 
+ 
+  
